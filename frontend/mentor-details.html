@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mentor Details - CareerMentor AI</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap">
+  <link rel="stylesheet" href="mentor-details.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img id="mentorImg" src="" alt="Mentor" />
+      <h2 id="mentorName">Mentor Name</h2>
+      <p id="mentorRole">Mentor Role</p>
+      <div class="skills" id="mentorSkills">
+        <!-- Skills populated here -->
+      </div>
+    </div>
+
+    <form action="booking-success.html" method="GET" class="form">
+      <h3>Book a Session</h3>
+      <label>
+        Your Name:
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Email:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Preferred Date:
+        <input type="date" name="date" required>
+      </label>
+      <label>
+        Message (optional):
+        <textarea name="message" rows="3"></textarea>
+      </label>
+      <input type="submit" value="Confirm Booking" />
+    </form>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+
+    // Dummy data (you can replace this with fetch logic)
+    const mentorData = {
+      1: {
+        name: "Priya Sharma",
+        role: "AI Lead @ TCS",
+        img: "https://randomuser.me/api/portraits/women/65.jpg",
+        skills: ["AI", "ML", "Career Advice"]
+      },
+      2: {
+        name: "Ravi Mehta",
+        role: "Full Stack Dev @ Zoho",
+        img: "https://randomuser.me/api/portraits/men/52.jpg",
+        skills: ["JavaScript", "Spring", "React"]
+      },
+      3: {
+        name: "Sneha Desai",
+        role: "UX Designer @ Zomato",
+        img: "https://randomuser.me/api/portraits/women/44.jpg",
+        skills: ["Figma", "Wireframing"]
+      }
+    };
+
+    const mentor = mentorData[id];
+    if (mentor) {
+      document.getElementById("mentorName").textContent = mentor.name;
+      document.getElementById("mentorRole").textContent = mentor.role;
+      document.getElementById("mentorImg").src = mentor.img;
+      document.getElementById("mentorSkills").innerHTML = mentor.skills.map(skill =>
+        `<span>${skill}</span>`
+      ).join("");
+    }
+  </script>
+</body>
+</html>

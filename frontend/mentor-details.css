@@ -1,0 +1,84 @@
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background-color: #f0f4ff;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    width: 50%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .card img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+  }
+  
+  .skills span {
+    display: inline-block;
+    background: #e6e6ff;
+    padding: 5px 12px;
+    margin: 5px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+  
+  .form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    width: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .form h3 {
+    margin-top: 0;
+  }
+  
+  .form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .form input[type="text"],
+  .form input[type="email"],
+  .form input[type="date"],
+  .form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .form input[type="submit"] {
+    background-color: #7a3cff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .form input[type="submit"]:hover {
+    background-color: #5f2fd3;
+  }
+  

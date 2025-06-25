@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jobs – CareerMentorAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="jobs.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h2><span style="color: black">CareerMentor</span><span style="color: #7a3cff;">AI</span></h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="resume-builder.html">Resume Builder</a>
+        <a href="chat.html">AI Chat</a>
+        <a href="jobs.html" class="active">Jobs</a>
+        <a href="index.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="job-section">
+      <h1>Job Opportunities 🔍</h1>
+      <p>Browse AI-matched jobs that align with your profile and skills.</p>
+      <input type="text" id="jobSearchInput" placeholder="Search job title or skill..." class="search-box"/>
+
+      <div class="job-list" id="jobList">
+        <!-- Job 1 -->
+        <div class="job-card">
+          <h3 class="job-title">Frontend Developer</h3>
+          <p><strong>Company:</strong> TechNova</p>
+          <p><strong>Location:</strong> Remote</p>
+          <p class="job-skills"><strong>Skills:</strong> HTML, CSS, JavaScript, React</p>
+          <button onclick="location.href='apply.html?job=Frontend Developer'">Apply Now</button>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="job-card">
+          <h3 class="job-title">Data Analyst</h3>
+          <p><strong>Company:</strong> DataWorks</p>
+          <p><strong>Location:</strong> Bangalore, India</p>
+          <p class="job-skills"><strong>Skills:</strong> SQL, Python, Excel, PowerBI</p>
+          <button onclick="location.href='apply.html?job=Data Analyst'">Apply Now</button>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="job-card">
+          <h3 class="job-title">Backend Developer</h3>
+          <p><strong>Company:</strong> CloudSpark</p>
+          <p><strong>Location:</strong> Hybrid</p>
+          <p class="job-skills"><strong>Skills:</strong> Java, Spring Boot, PostgreSQL</p>
+          <button onclick="location.href='apply.html?job=Backend Developer'">Apply Now</button>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="job-card">
+          <h3 class="job-title">UX/UI Designer</h3>
+          <p><strong>Company:</strong> PixelCraft</p>
+          <p><strong>Location:</strong> Mumbai, India</p>
+          <p class="job-skills"><strong>Skills:</strong> Figma, Adobe XD, User Research</p>
+          <button onclick="location.href='apply.html?job=UX/UI Designer'">Apply Now</button>
+        </div>
+
+        <!-- Job 5 -->
+        <div class="job-card">
+          <h3 class="job-title">AI/ML Engineer</h3>
+          <p><strong>Company:</strong> BrainAI</p>
+          <p><strong>Location:</strong> Remote</p>
+          <p class="job-skills"><strong>Skills:</strong> Python, TensorFlow, NLP</p>
+          <button onclick="location.href='apply.html?job=AI/ML Engineer'">Apply Now</button>
+        </div>
+
+        <!-- Job 6 -->
+        <div class="job-card">
+          <h3 class="job-title">DevOps Engineer</h3>
+          <p><strong>Company:</strong> DeployHQ</p>
+          <p><strong>Location:</strong> Chennai, India</p>
+          <p class="job-skills"><strong>Skills:</strong> AWS, Docker, Kubernetes, CI/CD</p>
+          <button onclick="location.href='apply.html?job=DevOps Engineer'">Apply Now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Search Filter Script -->
+  <script>
+    const searchInput = document.getElementById('jobSearchInput');
+    const jobCards = document.querySelectorAll('.job-card');
+
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+
+      jobCards.forEach(card => {
+        const title = card.querySelector('.job-title').textContent.toLowerCase();
+        const skills = card.querySelector('.job-skills').textContent.toLowerCase();
+
+        if (title.includes(query) || skills.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

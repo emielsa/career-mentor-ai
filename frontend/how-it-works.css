@@ -1,0 +1,80 @@
+/* how-it-works.css */
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background: #f5faff;
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #0d47a1;
+}
+
+.subtext {
+  font-size: 16px;
+  color: #607d8b;
+  margin-bottom: 50px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.step-card {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 36px;
+  color: #0288d1;
+  margin-bottom: 15px;
+}
+
+.step-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.cta {
+  margin-top: 60px;
+}
+
+.cta-btn {
+  background: #0288d1;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #0277bd;
+}

@@ -1,0 +1,70 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - CareerMentor AI</title>
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="glass-card">
+        <h2>Welcome Back</h2>
+        <form id="loginForm">
+          <div class="input-group">
+            <i class="fa fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <i class="fa fa-lock"></i>
+            <input type="password" id="password" placeholder="Password" required />
+          </div>
+
+          <button class="primary-btn" type="submit">Login</button>
+
+          <div class="social-container">
+            <button class="google" type="button"><i class="fab fa-google"></i> Google</button>
+            <button class="linkedin" type="button"><i class="fab fa-linkedin"></i> LinkedIn</button>
+          </div>
+
+          <p class="text">
+            Don't have an account? <a href="signup.html">Sign up</a>
+          </p>
+          <p class="text">
+            <a href="index.html">← Back to Home</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        try {
+          const response = await fetch("http://localhost:8080/api/auth/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password })
+          });
+
+          const token = await response.text();
+
+          if (response.ok) {
+            localStorage.setItem("token", token);
+            alert("Login successful!");
+            window.location.href = "dashboard.html";
+          } else {
+            alert("Login failed: " + token);
+          }
+        } catch (err) {
+          alert("Error: " + err.message);
+        }
+      });
+    </script>
+  </body>
+  </html>

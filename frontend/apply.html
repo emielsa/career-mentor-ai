@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply for Job – CareerMentorAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="apply.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Apply for <span id="jobTitle">Job</span></h2>
+    <form id="applicationForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="coverLetter">Cover Letter</label>
+      <textarea id="coverLetter" name="coverLetter" rows="5" placeholder="Tell us why you're a great fit..." required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <script>
+    // Extract job title from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const job = urlParams.get('job') || 'the Job';
+    document.getElementById("jobTitle").innerText = job;
+
+    // Submit handler
+    document.getElementById("applicationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const fullName = document.getElementById("fullName").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const coverLetter = document.getElementById("coverLetter").value;
+
+      // Redirect to success.html with submitted data
+      const query = new URLSearchParams({
+        job,
+        fullName,
+        email,
+        phone,
+        coverLetter
+      }).toString();
+
+      window.location.href = `success.html?${query}`;
+    });
+  </script>
+</body>
+</html>

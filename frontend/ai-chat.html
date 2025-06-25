@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Mentor Chat - CareerMentor AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="chat.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">CareerMentor<span>AI</span></div>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="resume-builder.html">Resume Builder</a></li>
+      <li><a href="#" class="active">AI Chat</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="chat-container">
+    <div class="chat-box" id="chatBox"></div>
+    <form id="chatForm">
+      <input type="text" id="userInput" placeholder="Ask me anything about your career..." required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>

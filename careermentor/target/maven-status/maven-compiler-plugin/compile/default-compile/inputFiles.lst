@@ -1,0 +1,9 @@
+/home/user/Desktop/career-mentor-ai/careermentor/src/main/java/com/careermentor/careermentor/model/User.java
+/home/user/Desktop/career-mentor-ai/careermentor/src/main/java/com/careermentor/careermentor/config/SecurityConfig.java
+/home/user/Desktop/career-mentor-ai/careermentor/src/main/java/com/careermentor/careermentor/CareermentorApplication.java
+/home/user/Desktop/career-mentor-ai/careermentor/src/main/java/com/careermentor/careermentor/dto/SignupRequest.java
+/home/user/Desktop/career-mentor-ai/careermentor/src/main/java/com/careermentor/careermentor/controller/AuthController.java
+/home/user/Desktop/career-mentor-ai/careermentor/src/main/java/com/careermentor/careermentor/config/AppConfig.java
+/home/user/Desktop/career-mentor-ai/careermentor/src/main/java/com/careermentor/careermentor/util/JwtUtil.java
+/home/user/Desktop/career-mentor-ai/careermentor/src/main/java/com/careermentor/careermentor/respository/UserRepository.java
+/home/user/Desktop/career-mentor-ai/careermentor/src/main/java/com/careermentor/careermentor/dto/LoginRequest.java

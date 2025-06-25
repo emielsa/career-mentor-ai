@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mentors - CareerMentor AI</title>
+  <link rel="stylesheet" href="mentors.css" />
+  <script defer src="mentors.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Find Your Mentor</h1>
+
+    <div class="filters">
+      <select id="domainFilter">
+        <option value="">All Domains</option>
+        <option value="AI">AI</option>
+        <option value="Web Development">Web Development</option>
+        <option value="UI/UX">UI/UX</option>
+        <option value="Data Science">Data Science</option>
+      </select>
+
+      <select id="experienceFilter">
+        <option value="">All Levels</option>
+        <option value="Entry">Entry</option>
+        <option value="Mid">Mid</option>
+        <option value="Senior">Senior</option>
+      </select>
+    </div>
+
+    <div id="mentorCards" class="cards-container">
+      <!-- Cards will be injected here by mentors.js -->
+    </div>
+  </div>
+</body>
+</html>

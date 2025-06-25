@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Builder - CareerMentor AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="resume.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">CareerMentor<span>AI</span></div>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="#" class="active">Resume Builder</a></li>
+      <li><a href="ai-chat.html">AI Chat</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Build Your Resume</h1>
+    <form id="resumeForm">
+      <h3>Personal Details</h3>
+      <input type="text" placeholder="Full Name" id="fullName" required>
+      <input type="email" placeholder="Email" id="email" required>
+      <input type="text" placeholder="Phone Number" id="phone" required>
+
+      <h3>Education</h3>
+      <input type="text" placeholder="Degree" id="degree">
+      <input type="text" placeholder="Institution" id="institution">
+      <input type="text" placeholder="Year of Passing" id="year">
+
+      <h3>Experience</h3>
+      <textarea placeholder="Work Experience" id="experience"></textarea>
+
+      <h3>Skills</h3>
+      <textarea placeholder="Your Skills" id="skills"></textarea>
+
+      <button type="button" onclick="generateResume()">Generate Resume</button>
+      <button type="button" onclick="downloadPDF()">Download as PDF</button>
+    </form>
+  </div>
+
+  <div id="resumePreview" class="preview"></div>
+
+  <!-- JS Scripts -->
+  <script src="resume.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Confirmed - CareerMentor AI</title>
+  <link rel="stylesheet" href="booking-success.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="success-container">
+    <h1>🎉 Booking Confirmed!</h1>
+    <p>Thank you <strong id="userName"></strong>, your session has been booked successfully!</p>
+
+    <div class="summary">
+      <p><strong>Email:</strong> <span id="userEmail"></span></p>
+      <p><strong>Session Date:</strong> <span id="sessionDate"></span></p>
+      <p><strong>Message:</strong> <span id="userMessage"></span></p>
+    </div>
+
+    <a href="index.html" class="btn">Back to Dashboard</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('userName').textContent = params.get('name');
+    document.getElementById('userEmail').textContent = params.get('email');
+    document.getElementById('sessionDate').textContent = params.get('date');
+    document.getElementById('userMessage').textContent = params.get('message') || 'N/A';
+  </script>
+</body>
+</html>

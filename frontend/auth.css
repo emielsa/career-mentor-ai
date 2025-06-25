@@ -1,0 +1,142 @@
+/* auth.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: #e3f2fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.glass-card h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #607d8b;
+  font-size: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px 14px 48px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.8);
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 0 2px rgba(3,169,244,0.4);
+}
+
+button.primary-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #0288d1, #03a9f4);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+button.primary-btn:hover {
+  opacity: 0.9;
+}
+
+/* Social Login */
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.social-container button {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #fff;
+}
+
+.social-container .google {
+  background: #db4437;
+}
+
+.social-container .linkedin {
+  background: #0077b5;
+}
+
+/* Links */
+p.text {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #455a64;
+}
+
+p.text a {
+  color: #0288d1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.glass-card {
+  animation: fadeIn 0.6s ease-out;
+}

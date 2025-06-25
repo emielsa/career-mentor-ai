@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Application Submitted – CareerMentorAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f6f8ff;
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      background-color: white;
+      padding: 2rem 2.5rem;
+      border-radius: 14px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      color: #4CAF50;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0.6rem 0;
+      font-size: 1.05rem;
+      color: #333;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .button {
+      display: block;
+      margin: 2rem auto 0;
+      padding: 0.9rem 2rem;
+      background-color: #7a3cff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #5c2add;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>✅ Application Submitted Successfully!</h2>
+    <p><span class="label">Job Title:</span> <span id="jobTitle"></span></p>
+    <p><span class="label">Full Name:</span> <span id="fullName"></span></p>
+    <p><span class="label">Email:</span> <span id="email"></span></p>
+    <p><span class="label">Phone:</span> <span id="phone"></span></p>
+    <p><span class="label">Cover Letter:</span></p>
+    <p id="coverLetter" style="white-space: pre-wrap; background: #f4f4f4; padding: 1rem; border-radius: 10px;"></p>
+
+    <a href="jobs.html" class="button">🔙 Back to Jobs</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("jobTitle").textContent = params.get("job");
+    document.getElementById("fullName").textContent = params.get("fullName");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("phone").textContent = params.get("phone");
+    document.getElementById("coverLetter").textContent = params.get("coverLetter");
+  </script>
+</body>
+</html>
